@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Math.rondom | Math.floor</title>
+</head>
+
+
+<style>
+ 
+ body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 40px ;
+ }
+ 
+ #num {
+  padding: 10px ;
+  font-size: 40px ;
+  color: white ;
+  border-radius: 7px ;
+  background: red;
+ }
+ 
+ button {
+  background: #FFC900;
+  border: none ;
+  border-radius: 5px ;
+  font-weight: bold ;
+  padding: 10px 30px ;
+ }
+ 
+ 
+ 
+</style>
+
+
+<body>
+
+ <h2 id="num">0%</h2>
+ 
+ 
+ <button onclick="go()">Go</button>
+
+<script>
+ 
+ 
+ var number = document.getElementById('num');
+ 
+  
+  function go() {
+  
+   var rondomNumber = Math.random();
+   rondomNumber = Math.floor(rondomNumber * 101);
+   
+   if (rondomNumber > 50) {
+    number.innerText = rondomNumber + '%';
+    number.style.background = 'green';
+    }   else {
+     number.innerText = rondomNumber + '%';
+     number.style.background = 'red';
+    }
+   
+   
+  }
+  
+ 
+ 
+ 
+</script>
+
+
+
+</body>
+  </html>
